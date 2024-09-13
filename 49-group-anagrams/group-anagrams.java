@@ -8,7 +8,7 @@ class Solution {
         //     long pro = 1L; //taking product, here using long for larger data
            
         //     for(int i=0; i<word.length(); i++){
-        //         pro *= num[word.charAt(i) - 'a'];
+        //         pro *= num[word.charAt(i) - 'a'];  // it will the position in the 26 character
         //     }
 
         //     if(map.containsKey(pro)){

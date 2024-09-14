@@ -31,7 +31,7 @@ class Solution {
 
 
 
-    public ListNode get(int len,ListNode head){
+    public static ListNode get(int len,ListNode head){
 
         ListNode temp = head;
 

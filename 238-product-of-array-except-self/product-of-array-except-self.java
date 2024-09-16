@@ -35,7 +35,7 @@ class Solution {
 
 int pre[] = new int[nums.length];
 
-pre[0] = 1;
+pre[0] = 1; //left
 
 for(int i=1; i<nums.length; i++){
 
@@ -45,14 +45,14 @@ for(int i=1; i<nums.length; i++){
 
 int suff[] = new int[nums.length];
 
-suff[nums.length-1] = 1;
+suff[nums.length-1] = 1;  //right
 
 for(int i=nums.length-2; i>=0; i--){
 
     suff[i] = nums[i+1] * suff[i+1];
 }
 
-int res[] = new int [nums.length];
+int res[] = new int [nums.length];  //at last multiplying 
 
 for(int i=0; i<nums.length; i++){
 

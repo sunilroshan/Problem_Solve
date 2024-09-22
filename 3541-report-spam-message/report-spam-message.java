@@ -1,7 +1,9 @@
 class Solution {
     public boolean reportSpam(String[] message, String[] bannedWords) {
 
-        Set<String> list = new HashSet<>();
+      //  List<String> list = new ArrayList<>();  // failing for large test cases O(N*M)
+
+      Set<String>list = new HashSet<>();
 
         for(String s : bannedWords){
             list.add(s);

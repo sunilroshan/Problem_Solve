@@ -15,14 +15,14 @@ class Solution {
 
 
                 if(prev == 0 && next == 0){
-                    flowerbed[i] = 1;
+                    flowerbed[i] = 1; // if i am not place this how it honna be jsut draw it 
                     count++;
                     
                 }
             }
         }
         
-      return count >= n;
+      return count >= n;  // [0,0,1,0,0]   //n = 1
        
     }
 }

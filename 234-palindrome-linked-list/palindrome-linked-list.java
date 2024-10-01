@@ -13,7 +13,7 @@ class Solution {
 
         ListNode mid = middle(head);//first head
         ListNode reverse = reversemid(mid);//second head
-        ListNode rereverse = reverse;
+        // ListNode rereverse = reverse;
 
         while(head != null && reverse != null){
             if(head.val != reverse.val){
@@ -23,7 +23,7 @@ class Solution {
             reverse = reverse.next;
         }
 
-        reversemid(rereverse);
+        // reversemid(rereverse);
 
         if(head == null || reverse == null){
             return true;

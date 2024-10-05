@@ -36,7 +36,7 @@ class Solution {
                 temp = temp.next;
             }
 
-            for(int i = 0; cur != null && i < k; i++){
+            for(int i = 0;  i < k; i++){
                 cur.next = prev;
                 prev = cur;
                 cur = next;

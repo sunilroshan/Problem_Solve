@@ -47,7 +47,7 @@ class Solution {
             }
         }   
 
-        List<List<String>> ans = new ArrayList<List<String>>();
+        List<List<String>> ans = new ArrayList<>();
 
         for(List<String> val : map.values()){
             ans.add(val);

@@ -32,15 +32,18 @@ class Solution {
         }
 
         Set<List<Integer>> arr = new HashSet<>();   //new learn
+        int left = 0;
+        int right = 0;
+        int sum = 0;
 
         for(int i=0; i<nums.length-2; i++){
-
-            int left = i+1;
-            int right = nums.length-1;
+            sum = 0;
+            left = i+1;
+            right = nums.length-1;
 
             while(left < right){
 
-                int sum = nums[i]+nums[left]+nums[right];
+                sum = nums[i]+nums[left]+nums[right];
 
                 if(sum == 0){
                     arr.add(Arrays.asList(nums[i],nums[left],nums[right])); //new learn 

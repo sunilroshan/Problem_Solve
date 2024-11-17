@@ -39,8 +39,9 @@ class Solution {
         int j = 0; // for non zero element
         
         for(int i = 0; i < n && j < n; i++){
+        
             
-            if(arr[i] != 0 || arr[j] != 0){
+            if(arr[i] != 0){
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
@@ -48,6 +49,19 @@ class Solution {
             }
            
         }
+        
+        // just for analyse
+        
+    //       int nonZeroIndex=0;
+    //   for (int i = 0; i < arr.length; i++) {
+    //         if (arr[i] != 0) {
+    //             arr[nonZeroIndex++] = arr[i];
+    //         }
+    //     }
+    //     while (nonZeroIndex < arr.length) {
+    //         arr[nonZeroIndex++] = 0;
+    //     }
+    // }
         
         
     }

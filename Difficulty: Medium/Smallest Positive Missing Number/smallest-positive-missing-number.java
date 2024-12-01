@@ -43,34 +43,34 @@ class Solution {
     public int missingNumber(int[] arr) {
         
         
-        // int n = arr.length;
-        
-        // ArrayList<Integer> list = new ArrayList<>();
-        
-        // for(int i : arr){
-        //     list.add(i);
-        // }
-        
-        // for(int i = 1; i <= n+1; i++){   ///failing at last 10 testcases
-        //     if(!list.contains(i)){
-        //         return i;
-        //     }
-        // }
-        
-        // return 0;
-        
         int n = arr.length;
         
-        Arrays.sort(arr);
+        HashSet<Integer> list = new HashSet<>();
         
-        int num = 1;
+        for(int i : arr){
+            list.add(i);
+        }
         
-        for(int i = 0; i < n; i++){
-            if(arr[i] == num){
-                num++;
+        for(int i = 1; i <= n+1; i++){   ///failing at last 10 testcases
+            if(!list.contains(i)){
+                return i;
             }
         }
         
-        return num;
+        return 0;
+        
+        // int n = arr.length;
+        
+        // Arrays.sort(arr);
+        
+        // int num = 1;
+        
+        // for(int i = 0; i < n; i++){
+        //     if(arr[i] == num){
+        //         num++;
+        //     }
+        // }
+        
+        // return num;
     }
 }

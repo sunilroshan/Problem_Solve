@@ -47,25 +47,30 @@ class Solution {
             }
         }
 
-        // Return true if we are able to place all 'k' cows
-        return (cnt >= k);
+        if(cnt >= k){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     static int aggressiveCows(int[] stalls, int k) {
       
-        // sorting the array to ensure stalls in sequence
+    
         Arrays.sort(stalls);
         int res = 0; 
         
-        // Search Space for Binary Search
-        int lo = 1;
+       
+        int lo = 1; //this is the minimum distance from 1 to max - min
         int hi = stalls[stalls.length - 1] - stalls[0]; 
 
         while(lo <= hi) {
+            
             int mid = lo + (hi - lo) / 2;
             
-            // If the mid distance is possible, update
-            // the result and search for larger distance
+            //consider true mean foent side
+            //false mean back side
             if(check(stalls, k, mid)) {
                 res = mid;
                 lo = mid + 1;

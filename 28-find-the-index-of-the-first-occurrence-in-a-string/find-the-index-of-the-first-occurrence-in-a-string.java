@@ -4,33 +4,34 @@ class Solution {
        // return haystack.indexOf(needle); 
 
            
+     int n1 = haystack.length();
+     int n2 = needle.length();
 
-       for(int i=0; i<haystack.length(); i++){
-        if(haystack.charAt(i) == needle.charAt(0)){
+     for(int i = 0; i < n1; i++){
 
-            int k = i;//haystack
-            int j = 0;//needle
+        if(needle.charAt(0) == haystack.charAt(i)){
 
-            while(k<haystack.length() && j<needle.length()
-           && haystack.charAt(k) == needle.charAt(j)){
-           {
-
-           
-                k++;
-                j++;
-            }
+            int k = i;
+            int j = 0;
             
+           while(k < n1 && j < n2){
 
-            if(needle.length() == j){  //here break statement because we are using the "&&" operator
-                return i;
+            if(needle.charAt(j) == haystack.charAt(k)){
+                j++;
+                k++;
             }
-    
+            else{
+                break;
             }
+           }
 
+           if(j == n2){
+            return i;
+           }
         }
-       }
-       
-       return -1;  
+     } 
+
+     return -1;
         
     }
 }

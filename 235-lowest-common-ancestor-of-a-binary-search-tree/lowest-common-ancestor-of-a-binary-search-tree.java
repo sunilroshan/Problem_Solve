@@ -22,9 +22,10 @@ class Solution {
             else if(p.val < curr && q.val < curr){
                 return lowestCommonAncestor(root.left,p,q);
             }
-
-     
+            else{
                 return root;
+
+            }     
             
         }
 

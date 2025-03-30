@@ -6,42 +6,39 @@ class Solution {
 
         ArrayList<Integer> ans = new ArrayList<> ();
 
-        int top = 0;
-        int bottom = n-1;
-        int left = 0;
-        int right = m-1;
+         int rowst = 0, rowend = n - 1;
+        int colst = 0, colend = m - 1;
 
-        while(top <= bottom && left <= right){
-
-            for(int i=left; i<=right; i++){
-                ans.add(matrix[top][i]);
+       while (rowst <= rowend && colst <= colend) {
+            // Traverse Right
+            for (int i = colst; i <= colend; i++) {
+                ans.add(matrix[rowst][i]);
             }
-            top++;
+            rowst++;
 
-            for(int i=top; i<=bottom; i++){
-                ans.add(matrix[i][right]);
+            // Traverse Down
+            for (int i = rowst; i <= rowend; i++) {
+                ans.add(matrix[i][colend]);
             }
-            right--;
+            colend--;
 
-              if(top <= bottom){// for array index out of bound you have to remember the duplicate zeros
-
-              // Check if there is still a bottom row to traverse
-              
-
-            for(int i=right; i>=left; i--){
-                ans.add(matrix[bottom][i]);
-            }
-            bottom--;
-            }
-
-            if(left <= right){
-                  // Check if there is still a left column to traverse
-                for(int i=bottom; i>=top; i--){
-                    ans.add(matrix[i][left]);
+            // Traverse Left (Check if row still exists)
+            if (rowst <= rowend) {
+                for (int i = colend; i >= colst; i--) {
+                    ans.add(matrix[rowend][i]);
                 }
-                left++;
+                rowend--;
+            }
+
+            // Traverse Up (Check if column still exists)
+            if (colst <= colend) {
+                for (int i = rowend; i >= rowst; i--) {
+                    ans.add(matrix[i][colst]);
+                }
+                colst++;
             }
         }
+
           
          return ans;
         

@@ -6,9 +6,9 @@ class Solution {
         
         int min = prices[0];
 
-        for(int i=0; i<n; i++){  //if the input is given
+        for(int i=1; i<n; i++){  //if the input is given
              
-             if(min < prices[i]){
+             if(prices[i] > min){
                  max = Math.max(max,prices[i] - min);
              }
              else{

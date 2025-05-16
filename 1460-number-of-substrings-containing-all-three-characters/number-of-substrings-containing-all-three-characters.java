@@ -34,7 +34,7 @@ class Solution {
 
             lastseen[s.charAt(i) - 'a'] = i;
 
-            if(lastseen[0] != -1 && lastseen[1] != -1 && lastseen[2] != -1){
+            if(lastseen[0] != -1 || lastseen[1] != -1 || lastseen[2] != -1){
                 ct += 1 + Math.min(lastseen[0],(Math.min(lastseen[1],lastseen[2])));
             }
         }

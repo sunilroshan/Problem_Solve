@@ -47,10 +47,10 @@ class Solution {
 
             while((r - l + 1) - maxfreq > k){
                 hash[s.charAt(l) - 'A']--;
-                maxfreq = 0;
-                for(int i = 0; i < 26; i++){
-                    maxfreq = Math.max(maxfreq,hash[i]);
-                }
+                // maxfreq = 0;
+                // for(int i = 0; i < 26; i++){
+                //     maxfreq = Math.max(maxfreq,hash[i]);  //if remove this step ..we will improve complexity
+                // }
                 l++;
 
             }

@@ -3,7 +3,7 @@ class Solution {
 
        Stack<Character> st = new Stack<>();
 
-       String cl = "";
+       int close = 0;
 
        for(char c : s.toCharArray()){
           
@@ -15,12 +15,12 @@ class Solution {
                 st.pop();
             }
             else{
-                cl += c;
+                close++;
             }
           }
        }
 
-       int ans = cl.length() + st.size();
+       int ans = close + st.size();
        return ans;
         
     }

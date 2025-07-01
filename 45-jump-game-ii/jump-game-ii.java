@@ -5,7 +5,7 @@ class Solution {
 
         int dp[] = new int[n];
 
-        Arrays.fill(dp,Integer.MAX_VALUE-100000000);
+        Arrays.fill(dp,100000000);
 
          dp[n - 1] = 0;
 

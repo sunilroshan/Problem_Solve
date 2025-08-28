@@ -11,16 +11,24 @@ class Solution {
 
        while (rowst <= rowend && colst <= colend) {
             // Traverse Right
+            if(colst <= colend){
+           
             for (int i = colst; i <= colend; i++) {
                 ans.add(matrix[rowst][i]);
             }
             rowst++;
 
+            }
+
             // Traverse Down
+            if(rowst <= rowend){
+
             for (int i = rowst; i <= rowend; i++) {
                 ans.add(matrix[i][colend]);
             }
             colend--;
+
+            }
 
             // Traverse Left (Check if row still exists)
             if (rowst <= rowend) {  //for edge case

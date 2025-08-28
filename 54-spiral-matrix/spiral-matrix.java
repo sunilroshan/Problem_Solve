@@ -23,7 +23,7 @@ class Solution {
             colend--;
 
             // Traverse Left (Check if row still exists)
-            if (rowst <= rowend) {
+            if (rowst <= rowend) {  //for edge case
                 for (int i = colend; i >= colst; i--) {
                     ans.add(matrix[rowend][i]);
                 }
@@ -31,7 +31,7 @@ class Solution {
             }
 
             // Traverse Up (Check if column still exists)
-            if (colst <= colend) {
+            if (colst <= colend) {//for edge case
                 for (int i = rowend; i >= rowst; i--) {
                     ans.add(matrix[i][colst]);
                 }
@@ -41,6 +41,30 @@ class Solution {
 
           
          return ans;
+
+        //   while(rowst <= rowend && colst <= colend){
+            
+        //     for(int i = colst; i < colend; i++){
+        //         System.out.print(arr[rowst][i]+" ");
+        //     }
+        //     rowst++;
+            
+        //     for(int i = rowst; i < rowend; i++){
+        //         System.out.print(arr[i][colend - 1]+" ");
+        //     }
+        //     colend--;
+            
+        //     for(int i = colend - 1; i >= colst; i--){
+        //         System.out.print(arr[rowend - 1][i]+" ");
+        //     }
+        //     rowend--;
+            
+        //     for(int i = rowend - 1; i >= rowst; i--){
+        //         System.out.print(arr[i][colst]+" ");
+        //     }
+        //     colst++;
         
     }
+        
+    
 }

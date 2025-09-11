@@ -11,21 +11,23 @@
 class Solution {
     public int getDecimalValue(ListNode head) {
 
-        String num = "";
+        StringBuilder sb = new StringBuilder();
 
         ListNode temp = head;
 
         while(temp != null){
-            num += temp.val;
+            sb.append(temp.val);
             temp = temp.next;
         }
+
+        sb.toString();
 
         int p = 0;
         int ans = 0;
 
-        for(int i = num.length() - 1; i >= 0; i--){
+        for(int i = sb.length() - 1; i >= 0; i--){
 
-            if(num.charAt(i) == '1'){
+            if(sb.charAt(i) == '1'){
 
                 ans += Math.pow(2,p);
                 p++;

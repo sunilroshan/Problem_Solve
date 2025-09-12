@@ -9,7 +9,7 @@ public class Solution extends VersionControl {
 
         while(l < r){
 
-            int mid = l + (r - l)/2;
+            int mid = l + (r - l)/2; //to overcome the integer overflow
 
             if(isBadVersion(mid)){
                 r = mid;

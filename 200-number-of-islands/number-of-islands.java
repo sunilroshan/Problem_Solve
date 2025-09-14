@@ -27,12 +27,7 @@ class Solution {
         int n = grid.length;
         int m = grid[0].length;
 
-        if(i < 0 || i >= n || j < 0 || j >= m){ //row   ///be carefull always recursion takes one step beyond the base condition
-            return;
-        }
-       
-
-        if(grid[i][j] == '0'){ //if '0'
+        if(i < 0 || i >= n || j < 0 || j >= m || grid[i][j] == '0'){ //row   ///be carefull always recursion takes one step beyond the base condition
             return;
         }
 

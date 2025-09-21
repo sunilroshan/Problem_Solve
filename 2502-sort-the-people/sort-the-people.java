@@ -39,10 +39,10 @@ class Solution {
 
           int in = arr.length - 1;
 
-          for(int i : map.keySet()){
+          for(String i : map.values()){
 
-            String s = map.get(i);
-            arr[in] = s;
+            // String s = map.get(i);
+            arr[in] = i;
             in--;
           }
 

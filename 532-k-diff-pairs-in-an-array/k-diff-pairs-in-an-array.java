@@ -3,6 +3,10 @@ class Solution {
 
         //unique pairs--- you can go with hashMap or hashSet
 
+        //nums[i] - nums[j] = k -->formula
+
+        //here we are checking nums[j] + k = nums[i] searching for nums[i]
+
         HashMap<Integer,Integer> map = new HashMap<>();
 
         for(int i : nums){
